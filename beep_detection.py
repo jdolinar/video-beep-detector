@@ -21,7 +21,7 @@ def load_audio(audio_path):
     logging.info(f"Audio loaded with sample rate {sr}")
     return y, sr
 
-def detect_beep_pairs(y, sr, beep_freq=2020, beep_duration=0.032, interval=0.165, pair_interval=2.0, sensitivity=1.0):
+def detect_beep_pairs(y, sr, beep_freq=2020, beep_duration=0.032, interval=0.165, pair_interval=2.0, tolerance=0.1, sensitivity=1.0):
     logging.info("Starting beep detection")
 
     # Convert times to samples
@@ -54,10 +54,10 @@ def detect_beep_pairs(y, sr, beep_freq=2020, beep_duration=0.032, interval=0.165
 
     logging.info(f"Detected {len(detected_pairs)} pairs of beeps")
 
-    # Find pairs followed by another pair exactly 2 seconds later
+    # Find pairs followed by another pair within the tolerance interval
     valid_pairs = []
     for i in range(len(detected_pairs) - 1):
-        if np.abs(detected_pairs[i+1] - detected_pairs[i] - pair_interval) < 0.1:
+        if pair_interval - tolerance <= detected_pairs[i+1] - detected_pairs[i] <= pair_interval + tolerance:
             valid_pairs.append(detected_pairs[i])
 
     logging.info(f"Detected {len(valid_pairs)} valid beep pairs")
