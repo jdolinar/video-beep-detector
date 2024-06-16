@@ -6,6 +6,12 @@ It will take input folder full of mp4 files and will try to detect two distinct 
 
 # How to install
 
+## Release
+1. Grab one from [releases page](https://github.com/jdolinar/viofo-video-beep-detector/releases/tag/latest)
+2. Install or unpack
+3. Click on icon on Desktop or Start Menu
+4. PROFIT!
+
 ## Source
 1. Get [latest Python](https://www.python.org/downloads/)
 2. (if that happens) Return live python to pet store and repeat step 1
@@ -13,10 +19,5 @@ It will take input folder full of mp4 files and will try to detect two distinct 
 4. Activate venv environment as per [python venv docs](https://docs.python.org/3/library/venv.html) (search for **Command to activate virtual environment**)
 5. Run ```python3 beep_detection.py [folder full of your mp4 files] [output text file]```
 6. PROFIT!
-
-## Release
-1. Grab one from [releases page](https://github.com/jdolinar/viofo-video-beep-detector/releases/tag/latest)
-2. Install or unpack
-3. PROFIT!
 
 Send beer or coffee!
