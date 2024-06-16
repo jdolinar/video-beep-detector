@@ -7,7 +7,7 @@ It will take input folder full of mp4 files and will try to detect two distinct 
 # How to install
 
 ## Release
-1. Grab one from [releases page](https://github.com/jdolinar/viofo-video-beep-detector/releases/tag/latest)
+1. Grab one from [releases page](https://github.com/jdolinar/viofo-video-beep-detector/releases)
 2. Install or unpack
 3. Click on icon on Desktop or Start Menu
 4. PROFIT!
